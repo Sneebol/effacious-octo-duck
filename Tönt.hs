@@ -1,4 +1,6 @@
-putManyLines[line] = do
-                      putStrLn line
+fruits = ["apple", "pear", "orange", "pineapple", "mango", "plum", "banana"]
 
-main = getLine >>= putManyLines
+putManyLines list = do
+                     mapM_ putStrLn list
+
+main = getLine >>= putManyLines >> putManyLines fruits
